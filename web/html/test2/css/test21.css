@@ -1,0 +1,14 @@
+h1 {
+    font-weight: bold;
+    line-height: 40px;
+}
+
+p {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+
+body {
+    text-align: center;
+}

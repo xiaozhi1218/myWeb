@@ -1,0 +1,35 @@
+h2 {
+    color: #003580;
+}
+
+#content {
+    font-size: 14px;
+    color: #000033;
+}
+
+.com {
+    text-decoration: underline;
+    color: #f00;
+}
+
+.director {
+    color: #1f87cc;
+}
+
+.short {
+    color: #faa53b;
+}
+
+.main {
+    color: #0d7114;
+}
+
+.first {
+    width: 100px;
+    height: 160px;
+}
+
+.actor {
+    width: 200px;
+    height: 130px;
+}

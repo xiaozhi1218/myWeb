@@ -1,0 +1,19 @@
+h1 {
+    font: normal bold 18px "楷体";
+}
+
+p span:nth-of-type(2) {
+    font-family: "宋体";
+}
+
+p span:nth-of-type(1) {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+p {
+    font-size: 12px;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 20px;
+}

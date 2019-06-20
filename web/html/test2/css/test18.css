@@ -1,0 +1,20 @@
+p {
+    font-size: 14px;
+}
+
+body h2 {
+    font-size: 16px;
+}
+
+h2.make {
+    color: red;
+}
+
+.make~h2 {
+    color: blue;
+}
+
+body+img {
+    width: 887px;
+    height: 439px;
+}
