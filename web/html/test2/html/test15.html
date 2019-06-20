@@ -10,26 +10,39 @@
 
 <body>
     <img src="../img/test15/bg_chs.png" alt="bg" />
-    <h1>注册账号</h1>
+    <h3>注册账号</h3>
     <form action="#">
-        <label for="name">
-            昵称：<input type="text" name="name" id="name" pattern="[-\w\u4E00-\u9FA5]{4,10}" required="required" />
-            长度为4-10个字符 </label><br /><br />
-        <label for="pass">
-            密码：<input type="password" name="password" id="pass" pattern="[\dA-Za-z]{6,16}" required="required" />
-            长度为6-16个字符 </label><br /><br />
-        <label for="password">
-            确认密码：<input type="password" name="password" id="password" pattern="[\dA-Za-z]{6,16}" required="required" />
-            长度为6-16个字符 </label><br /><br />
-        <label for="number">
-            确认密码：<input type="number" name="num" id="number" pattern="1[3578]\d{9}" required="required" />
-            密码长度为11位，以13|5|7|8开头 </label><br /><br />
-        <label for="email">
-            邮箱：<input type="email" name="email" id="email" /> </label><br /><br />
-        <label for="age">
-            年龄：<input type="number" name="num" id="age" min="0" /> </label><br /><br />
-        <button type="submit" name="submit">提交</button>
-        <img src="../img/test15/btn.bmp" alt="btn" />
+        <p>
+            <label for="name">昵称：</label>
+            <input type="text" name="name" id="name" pattern="[-\w\u4E00-\u9FA5]{4,10}" required="required" />
+            <span>长度为4-10个字符</span>
+        </p>
+        <p>
+            <label for="pass">密码：</label>
+            <input type="password" name="password" id="pass" pattern="[\dA-Za-z]{6,16}" required="required" />
+            <span>长度为6-16个字符</span>
+        </p>
+        <p>
+            <label for="password">确认密码：</label>
+            <input type="password" name="password" id="password" pattern="[\dA-Za-z]{6,16}" required="required" />
+            <span>长度为6-16个字符</span>
+        </p>
+        <p>
+            <label for="number">手机号码：</label>
+            <input type="number" name="num" id="number" pattern="1[3578]\d{9}" required="required" />
+            <span>号码长度为11位，以13|5|7|8开头</span>
+        </p>
+        <p>
+        	<label for="email">邮箱：</label>
+        	<input type="email" name="email" id="email" required="required"/>
+        </p>
+        <p>
+            <label for="age">年龄：</label>
+            <input type="text" name="num" id="age" required pattern="\d|[1-9]\d|1[0-2]\d" />
+        </p>
+        <p>
+            <input type="image" src="../img/test15/btn.bmp" alt="btn">
+        </p>
     </form>
 </body>
 

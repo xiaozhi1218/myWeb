@@ -6,60 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>阿里巴巴用户注册</title>
+    <style>
+        h1{
+            margin: 0;
+            padding: 0;
+            height: 40px;
+        }
+    </style>
 </head>
 
 <body>
-    <img src="../img/test13/logo.bmp" alt="logo" /><br />
-    <a href="#">登录</a>| <a href="#">阿里巴巴首页</a>|
-    <a href="#">客服中心</a>|
-    <img src="../img/test13/icon1.bmp" alt="icon1" />
-    <a href="#">提建议</a>
-    <p>
-        如需要帮助，请咨询
-        <img src="../img/test13/icon2.bmp" alt="icon2" />
-        或拨打400-800-1688
-    </p>
-    <p>
-        电子邮箱：
-        <input type="email" name="email" maxlength="32" />
-    </p>
-    <p>
-        会员登录名：
-        <input type="text" name="username" maxlength="32" />
-    </p>
-    <p>
-        密码：
-        <input type="password" name="password" maxlength="32" />
-    </p>
-    <p>
-        再次输入密码：
-        <input type="password" name="password" maxlength="32" />
-    </p>
-    <p>
-        会员身份：
-        <input type="radio" name="buy" value="买家" checked="checked" />买家
-        <input type="radio" name="sale" value="卖家" />卖家
-        <input type="radio" name="both" value="都是" />两者都是
-    </p>
-    <p>
-        验证码：
-        <input type="text" name="code" maxlength="5" />
-        <img src="../img/test13/verycode.gif" alt="code" />
-        <a href="#">看不清？换一张</a>
-    </p>
-    <img src="../img/test13/btn_reg.gif" alt="gif" /><br />
-    <textarea name="area" id="" cols="30" rows="10">
-        欢迎阅读阿里巴巴公司（阿里巴巴）服务条款协议(下称"本协议")，您应当在使用
-        服务之前认真阅读本协议全部内容，且对本协议中加粗字体显示的内容，阿里巴巴督促您应重点阅读。本协议阐述之条款和条件适用于您使用阿
-        里巴巴中文网站（所涉域名为：Alibaba.com.cn、alibaba.cn、1688.com，下同），所提供的在全球企业间(B-TO-B)电子市场(e-market)
-        中进行贸易和交流的各种工具和服务(下称"服务")。</textarea><br />
-    <a href="#">阿里巴巴版权所有&copy;2015-2018著作权与商标声明</a>|
-    <a href="#">法律声明</a>|
-    <a href="#">服务条款</a>|
-    <a href="#">隐私声明</a>|
-    <a href="#">联系我们</a>|
-    <a href="#">网站地图</a>|
-    <a href="#">产品体检中心</a>
+    <header>
+        <h1>
+            <img src="../img/test13/logo.bmp" alt="logo" />
+        </h1>
+        <a href="#">登录</a>| 
+        <a href="#">阿里巴巴首页</a>|
+        <a href="#">客服中心</a>|
+        <a href="#"><img src="../img/test13/icon1.bmp" alt="icon1" />提建议</a>
+        <p>
+            如需要帮助，请咨询
+            <a href="#"><img src="../img/test13/icon2.bmp" alt="icon2" /></a>
+            或拨打400-800-1688
+        </p>
+    </header>
+    <section>
+        <form action="#">
+            <p>
+                电子邮箱：
+                <input type="email" name="email" maxlength="32" required="required" />
+            </p>
+            <p>
+                会员登录名：
+                <input type="text" name="username" maxlength="32" />
+            </p>
+            <p>
+                密码：
+                <input type="password" name="password" maxlength="32" />
+            </p>
+            <p>
+                再次输入密码：
+                <input type="password" name="password" maxlength="32" />
+            </p>
+            <p>
+                会员身份：
+                <input type="radio" name="buy" value="买家" checked="checked" />买家
+                <input type="radio" name="buy" value="卖家" />卖家
+                <input type="radio" name="buy" value="都是" />两者都是
+            </p>
+            <p>
+                验证码：
+                <input type="text" name="code" maxlength="5" />
+                <img src="../img/test13/verycode.gif" alt="code" />
+                <a href="#">看不清？换一张</a>
+            </p>
+            <!-- <img src="../img/test13/btn_reg.gif" alt="gif" /><br /> -->
+            <input type="image" src="../img/test13/btn_reg.gif" alt="gig">
+            <p>
+                <textarea name="area" id="" cols="40" rows="10">
+                    欢迎阅读阿里巴巴公司（阿里巴巴）服务条款协议(下称"本协议")，您应当在使用
+                    服务之前认真阅读本协议全部内容，且对本协议中加粗字体显示的内容，阿里巴巴督促您应重点阅读。本协议阐述之条款和条件适用于您使用阿
+                    里巴巴中文网站（所涉域名为：Alibaba.com.cn、alibaba.cn、1688.com，下同），所提供的在全球企业间(B-TO-B)电子市场(e-market)
+                    中进行贸易和交流的各种工具和服务(下称"服务")。
+                </textarea>
+            </p>
+        </form>
+    </section>
+    <footer>
+        <p>
+            <a href="#">阿里巴巴版权所有&copy;2015-2018著作权与商标声明</a>|
+            <a href="#">法律声明</a>|
+            <a href="#">服务条款</a>|
+            <a href="#">隐私声明</a>|
+            <a href="#">联系我们</a>|
+            <a href="#">网站地图</a>|
+            <a href="#">产品体检中心</a>
+        </p>
+        <p>
+            <a href="#">阿里巴巴集团：阿里巴巴网络-中国 国际站 全球速卖通 日文站 中国万网</a>|
+            <a href="#">淘宝网</a>|
+            <a href="#">支付宝</a>|
+            <a href="#">中国雅虎</a>|
+            <a href="#">雅虎口碑网</a>|
+            <a href="#">阿里软件</a>|
+            <a href="#">阿里妈妈</a>|
+            <a href="#">集团研究中心</a>
+        </p>
+    </footer>
 </body>
 
 </html>
