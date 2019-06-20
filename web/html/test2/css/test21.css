@@ -6,9 +6,8 @@ h1 {
 p {
     font-size: 12px;
     line-height: 20px;
-    text-align: center;
 }
 
-body {
-    text-align: center;
+p img {
+    vertical-align: middle;
 }

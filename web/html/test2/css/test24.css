@@ -1,0 +1,14 @@
+.book {
+    width: 290px;
+    background-color: #f3f4df;
+    background: linear-gradient(to bottom,#f9fbcb,#f8f8f3)
+}
+
+.title {
+    font-size: 16px;
+    color: #fff;
+    line-height: 30px;
+    text-indent: 1em;
+    background: #518700 url(../img/test24/bang.gif) 100px 2px no-repeat; 
+    background-size: contain;
+}
