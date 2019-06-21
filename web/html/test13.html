@@ -33,30 +33,33 @@
     <section>
         <form action="#">
             <p>
-                电子邮箱：
-                <input type="email" name="email" maxlength="32" required="required" />
+                <label for="email">电子邮箱：</label>
+                <input type="email" name="email" id="email" maxlength="32" required="required" />
             </p>
             <p>
-                会员登录名：
-                <input type="text" name="username" maxlength="32" />
+                <label for="username">会员登录名：</label>
+                <input type="text" name="username" id="username" maxlength="32" />
             </p>
             <p>
-                密码：
-                <input type="password" name="password" maxlength="32" />
+                <label for="pass">密码：</label>
+                <input type="password" name="password" id="pass" maxlength="32" />
             </p>
             <p>
-                再次输入密码：
-                <input type="password" name="password" maxlength="32" />
+                <label for="pwd">再次输入密码：</label>
+                <input type="password" name="password" id="pwd" maxlength="32" />
             </p>
             <p>
                 会员身份：
-                <input type="radio" name="buy" value="买家" checked="checked" />买家
-                <input type="radio" name="buy" value="卖家" />卖家
-                <input type="radio" name="buy" value="都是" />两者都是
+                <input type="radio" name="buy" id="buy" value="买家" checked="checked" />
+                <label for="buy">买家</label>
+                <input type="radio" name="buy" id="sale" value="卖家" />
+                <label for="sale">卖家</label>
+                <input type="radio" name="buy" id="both" value="都是" />
+                <label for="both">两者都是</label>
             </p>
             <p>
-                验证码：
-                <input type="text" name="code" maxlength="5" />
+                <label for="code">验证码：</label>
+                <input type="text" name="code" id="code" maxlength="5" />
                 <img src="../img/test13/verycode.gif" alt="code" />
                 <a href="#">看不清？换一张</a>
             </p>
