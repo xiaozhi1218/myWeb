@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>电灯开关</title>
+</head>
+
+<body>
+    <img id="light" src="../../img/test31/off.gif" alt="" />
+
+    <script>
+        var light2 = document.getElementById("light");
+
+        var flag = false;
+
+        var fun = function () {
+            if (flag) {
+                light2.src = "../../img/test31/off.gif";
+                flag = false;
+            } else {
+                light2.src = "../../img/test31/on.gif";
+                flag = true;
+            }
+        }
+
+        light2.onclick = fun;
+
+        // light2.onclick = function () {
+        //     if (flag) {
+        //         light2.src = "../../img/test31/off.gif";
+        //         flag = false;
+        //     } else {
+        //         light2.src = "../../img/test31/on.gif";
+        //         flag = true;
+        //     }
+        //};
+    </script>
+</body>
+
+</html>

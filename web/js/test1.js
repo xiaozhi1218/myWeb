@@ -13,12 +13,3 @@ for (var i = 1; i <= 9; i++) {
     document.write("</tr>");
 }
 document.write("</table>");
-
-/**
- *方法测试
- * @param {*} a
- * @param {*} b
- */
-var fun2 = function (a, b) {
-    alert(a / b);
-};
