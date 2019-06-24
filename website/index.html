@@ -5,74 +5,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>同城旅游网</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-        }
-
-        a {
-            text-decoration: none;
-        }
-        #topNav,#topLogin {
-            display: inline-block;
-        }
-
-        ul li {
-            display: inline;
-        }
-    </style>
+    <title>同程旅游网</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/pic.js"></script>
 </head>
 
 <body>
-    <div id="header">
-        <div id="commonhead">
-            <div id="topNavWrapper">
-                <div id="topNavPanel">
-                    <div id="topLogin">
-                        <span>您好，请</span>
-                        <a href="#">登录</a>
-                        <a href="#">免费注册</a>
-                    </div>
-                    <ul id="topNav">
-                        <li id="topLanguage"><a href="#">Language</a></li>
-                        <li id="topMyOrder"><a href="#">我的订单</a></li>
-                        <li id="topMyTc"><a href="#">我的同城</a></li>
-                        <li id="servicePhone"><a href="#">客户服务</a></li>
-                        <li id="topJoinTc"><a href="#">合作中心</a></li>
-                        <li id="mobileTc"><a href="#">手机图标</a></li>
-                        <li id="weixinTc"><a href="#">微信图标</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div id="headerWapper"></div>
-            <div id="menuNav"></div>
+    <header>
+        <div id="img">
+            <img src="img/top_banner.jpg" alt="banner" width="100%">
         </div>
-    </div>
-
-    <div id="main">
-        <div id="selectMenu">
-            <ul id="selection">
-                <li>机票</li>
-                <li>火车票</li>
-                <li>酒店</li>
-                <li>景点</li>
-                <li>周边游</li>
-                <li>国内游</li>
-                <li>出境游</li>
-                <li>游轮</li>
+        <div id="searchMenu">
+            <img src="img/logo.png" alt="logo">
+            <img src="img/search.png " alt="search">
+            <img src="img/hotel_tel.png" alt="tel1">
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">机票</a></li>
+                <li><a href="#">火车票</a></li>
+                <li><a href="#">酒店</a></li>
+                <li><a href="#">景点</a></li>
+                <li><a href="#">周边游</a></li>
+                <li><a href="#">国内游</a></li>
+                <li><a href="#">出境游</a></li>
+                <li><a href="#">游轮</a></li>
+                <li><a href="#">其他</a></li>
             </ul>
-            <div id="orderMenu">
-                <a href="#">国内机票</a>
-                <a href="#">国际·港澳台机票</a>
-                <form action="#">
-                    <label for="departureCity">出发城市</label>
-                </form>
-                
-            </div>
         </div>
-    </div>
+    </header>
+
+    <section>
+        <div id="pic">
+            <img id="banner" src="img/banner_3.jpg" alt="banner3">
+        </div>
+
+        <div id="choise">
+            <img src="img/icon_5.jpg" alt="icon">
+            <h2>旅游精选</h2>
+            <hr color="#FFD700" />
+            <ul id="picList">
+                <li>
+                    <img src="img/jiangxuan_1.jpg" alt="jpg1">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 899</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_1.jpg" alt="jpg2">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 899</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_1.jpg" alt="jpg3">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 899</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_1.jpg" alt="jpg4">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 899</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_1.jpg" alt="jpg5">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 899</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_1.jpg" alt="jpg6">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 899</span></p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="domestic">
+            <img src="img/icon_6.jpg" alt="icon">
+            <h2>国内游</h2>
+            <hr color="#FFD700" />
+            <img src="img/guonei_1.jpg" alt="guonei">
+            <ul id="picList1">
+                <li>
+                    <img src="img/jiangxuan_2.jpg" alt="jpg1">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 699</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_2.jpg" alt="jpg2">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 699</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_2.jpg" alt="jpg3">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 699</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_2.jpg" alt="jpg4">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 699</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_2.jpg" alt="jpg5">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 699</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_2.jpg" alt="jpg6">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 699</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_2.jpg" alt="jpg6">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 699</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_2.jpg" alt="jpg6">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 699</span></p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="foreign" class="clear">
+            <img src="img/icon_7.jpg" alt="icon">
+            <h2>国内游</h2>
+            <hr color="#FFD700" />
+            <img src="img/jiangwai_1.jpg" alt="guowai">
+            <ul id="picList2">
+                <li>
+                    <img src="img/jiangxuan_3.jpg" alt="jpg1">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 599</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_3.jpg" alt="jpg2">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 599</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_3.jpg" alt="jpg3">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 599</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_3.jpg" alt="jpg4">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 599</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_3.jpg" alt="jpg5">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 599</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_3.jpg" alt="jpg6">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 599</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_3.jpg" alt="jpg6">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 599</span></p>
+                </li>
+                <li>
+                    <img src="img/jiangxuan_3.jpg" alt="jpg6">
+                    <p>上海飞三亚五天4晚自由行(春节销售+亲子<br />+蜜月+自由行)<span><br />&yen; 599</span></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div id="last">
+            <ul>
+                <li>
+                    <img src="img/icon_1.jpg" alt="icon1">
+                    <span>产品齐全<br />产品全自主选，随心买</span>
+                    
+                </li>
+                <li>
+                    <img src="img/icon_2.jpg" alt="icon2">
+                    <span>便利快捷<br />24小时不打烊，随时买</span>
+                </li>
+                <li>
+                    <img src="img/icon_3.jpg" alt="icon3">
+                    <span>安全支付<br />知名支付工具</span>
+                    
+                </li>
+                <li>
+                    <img src="img/icon_4.jpg" alt="icon4">
+                    <span>贴心服务<br />客服全年无休，安心买</span>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
 </html>
