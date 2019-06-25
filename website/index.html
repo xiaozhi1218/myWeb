@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>同程旅游网</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index1.css">
     <script src="js/pic.js"></script>
 </head>
 
@@ -17,12 +17,26 @@
         </div>
         <div id="searchMenu">
             <img src="img/logo.png" alt="logo">
-            <img src="img/search.png " alt="search">
+
+            <input type="search" name="searchbox" id="search" placeholder="请输入搜索内容">
+            <a href="#">搜索</a>
+        
+            <!-- <img src="img/search.png " alt="search"> -->
             <img src="img/hotel_tel.png" alt="tel1">
         </div>
         <div id="nav">
             <ul>
                 <li><a href="#">首页</a></li>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">其他</a>
+                    <div class="dropdown-content">
+                        <a href="#">链接1</a>
+                        <a href="#">链接2</a>
+                        <a href="#">链接3</a>
+                        <a href="#">链接4</a>
+                        <a href="#">链接5</a>
+                    </div>
+                </div>
                 <li><a href="#">机票</a></li>
                 <li><a href="#">火车票</a></li>
                 <li><a href="#">酒店</a></li>
@@ -31,7 +45,6 @@
                 <li><a href="#">国内游</a></li>
                 <li><a href="#">出境游</a></li>
                 <li><a href="#">游轮</a></li>
-                <li><a href="#">其他</a></li>
             </ul>
         </div>
     </header>
@@ -116,7 +129,7 @@
 
         <div id="foreign" class="clear">
             <img src="img/icon_7.jpg" alt="icon">
-            <h2>国内游</h2>
+            <h2>境外游</h2>
             <hr color="#FFD700" />
             <img src="img/jiangwai_1.jpg" alt="guowai">
             <ul id="picList2">
@@ -158,26 +171,46 @@
 
     <footer>
         <div id="last">
-            <ul>
-                <li>
-                    <img src="img/icon_1.jpg" alt="icon1">
-                    <span>产品齐全<br />产品全自主选，随心买</span>
-                    
-                </li>
-                <li>
-                    <img src="img/icon_2.jpg" alt="icon2">
-                    <span>便利快捷<br />24小时不打烊，随时买</span>
-                </li>
-                <li>
-                    <img src="img/icon_3.jpg" alt="icon3">
-                    <span>安全支付<br />知名支付工具</span>
-                    
-                </li>
-                <li>
-                    <img src="img/icon_4.jpg" alt="icon4">
-                    <span>贴心服务<br />客服全年无休，安心买</span>
-                </li>
-            </ul>
+
+            <div id="last1">
+                <img src="img/icon_1.jpg" alt="icon1">
+                <div id="box1">
+                    <h4>产品齐全</h4>
+                    <span>产品全自主选，随心买</span>
+                </div>
+            </div>
+
+
+            <div id="last2">
+                <img src="img/icon_2.jpg" alt="icon2">
+                <div id="box2">
+                    <h4>遍历快捷</h4>
+                    <span>24小时不打烊，随时买</span>
+                </div>
+            </div>
+
+            <div id="last3">
+                <img src="img/icon_3.jpg" alt="icon3">
+                <div id="box3">
+                    <h4>安全支付</h4>
+                    <span>知名支付工具</span>
+                </div>
+            </div>
+
+            <div id="last4">
+                <img src="img/icon_4.jpg" alt="icon4">
+                <div id="box4">
+                    <h4>贴心服务</h4>
+                    <span>客服全年无休，安心买</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <p>
+                江苏传智播客教育科技股份有限公司
+                版权所有Copyright 2006-2019&copy;, All Rights Reserved 苏ICP备16007882
+            </p>
         </div>
     </footer>
 </body>
