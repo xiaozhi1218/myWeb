@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="js/a.js">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <label for="salary">请输入应税工资：</label>
+        <input type="number" name="number" id="salary">
+        <input type="button" value="确认" onclick="getTax()">
+        <h1 id="tax"></h1>
+    </p>
+    <script>
+        function getTax() {
+            var salary = document.getElementById("salary").value;
+            salary -= 5000;
+            var tax = 0;
+            if (salary <= 3000) {
+                tax = salary * 0.03;
+            } else if (salary <= 12000) {
+                tax = salary * 0.1 - 210;
+            } else if (salary <= 25000) {
+                tax = salary * 0.2 - 1410;
+            }
+            document.getElementById("tax").innerHTML = tax;
+        }
+
+        function add (a, b) {
+            return a + b;   
+        }
+
+        var sum = add(1, 2, 3);
+        console.log(sum);
+    </script>
+</body>
+
+</html>
