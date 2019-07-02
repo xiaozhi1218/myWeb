@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>objcet</title>
+</head>
+
+<body>
+    <div class="container">
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>addr</th>
+                </tr>
+            </thead>
+            <tbody id="body"></tbody>
+        </table>
+    </div>
+
+    <script>
+        var people = {
+            code: 200,
+            data: [{
+                    id: 1,
+                    name: 'aaa',
+                    age: 28,
+                    addr: 'ddf'
+                },
+                {
+                    id: 2,
+                    name: 'bbb',
+                    age: 29,
+                    addr: 'sdf'
+                },
+                {
+                    id: 3,
+                    name: 'ccc',
+                    age: 30,
+                    addr: 'bdc'
+                },
+                {
+                    id: 4,
+                    name: 'ddd',
+                    age: 31,
+                    addr: 'qwe'
+                },
+                {
+                    id: 5,
+                    name: 'eee',
+                    age: 45,
+                    addr: 'ytr'
+                }
+            ]
+        }
+        console.log(people.data[0]);
+
+        var tb = document.getElementById('body');
+        for (var i = 0; i < people.data.length; i++) {
+            var p = people.data[i];
+            var tr = document.createElement('tr');
+            tr.innerHTML = "<td>" + p.id + "</td>" +
+                "<td>" + p.name + "</td>" +
+                "<td>" + p.age + "</td>" +
+                "<td>" + p.addr + "</td>";
+            tb.appendChild(tr);
+            tr.onclick = (function () {
+                var row = i + 1;
+                return function () {
+                    alert("第" + row + "行");
+                }
+            })();
+        }
+    </script>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
