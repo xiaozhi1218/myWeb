@@ -15,3 +15,4 @@ var arr = ["ab", 2, false, undefined];
 for (element in arr) {
     console.log(element);
 }
+console.log(arr);
