@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        Person.prototype.eat = function () {
+            alert(this.name + '吃饭了');
+        }
+
+        function Student (name, age, score) {
+            // Person.call(this, name, age)//call函数中的 this 关键字值是 Student。第二个和第三个参数是字符串。
+            // Person.apply(this, [name, age]);//apply函数中的 this 关键字值是 Student。第二个参数是由两个字符串构成的数组
+            Person.apply(this, arguments)
+            this.score = score;
+        }
+
+        // Student.prototype.__proto__ = Person.prototype;
+        Student.prototype = new Person();//这在原型链中是标准做法。要确保构造函数没有任何参数。
+        /*
+        子类的所有属性和方法都必须出现在 prototype 属性被赋值后，
+        因为在它之前赋值的所有方法都会被删除。为什么？
+        因为 prototype 属性被替换成了新对象，添加了新方法的原始对象将被销毁。
+        */
+
+        Student.prototype.study = function () {
+            alert(this.name + "学习")
+        }
+
+
+        var s1 = new Student("zhangsan", 23, 45);
+
+        
+    
+    </script>
+    <title>object</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
