@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            var $city = $("#city li");
+            // for (let i = 0; i < $city.length; i++) {
+            //     const element = $city[i];
+            //     alert(i + ":" + element.innerHTML);
+            // }
+            // for (var i = 0; i < $city.length; i++) {
+            //     alert(i + ":" + $city[i].innerHTML);
+            // }
+
+            // $city.each((index, element) => {
+            //     alert(this);
+                // alert(index + ":" + element.innerHTML);
+                // alert(index + ":" + $(element).html());
+            // })
+
+            // $(city).each(function (index, element) {
+            //     // element == this
+                
+            // });
+
+            // $.each($city, function (indexInArray, valueOfElement) { 
+            //     alert(indexInArray + ":" + $(valueOfElement).html()); 
+            // });
+
+            for (const li of $city) {
+                alert($(li).html())
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <ul id="city">
+        <li>北京</li>
+        <li>上海</li>
+        <li>天津</li>
+        <li>重庆</li>
+    </ul>
+</body>
+
+</html>
