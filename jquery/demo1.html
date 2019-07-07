@@ -1,22 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script>
-        
-        $(document).ready(function () {
-            $("h1").css();
-        });
-        
-    </script>
     <title>jquery</title>
-</head>
-<body>
+    <link rel="stylesheet" href="css/test19.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
 
-    <h1>sll</h1>
-    
+
+    <script>
+        $(document).ready(function () {
+            $.get("https://api.apiopen.top/musicRankings",
+                function (data) {
+                    $("h2").html(data.result[0].comment);
+
+                    $("#pic1").prop("src", data.result[0].pic_s210);
+
+                    $("#img1").prop("src", data.result[0].content[0].pic_big);
+                    $("#img2").prop("src", data.result[0].content[1].pic_big);
+                    $("#img3").prop("src", data.result[0].content[2].pic_big);
+                    $("#img4").prop("src", data.result[0].content[3].pic_big);
+
+                    $("#title1").html(data.result[0].content[0].title)
+                    $("#p1").html("歌手：" + data.result[0].content[0].author)
+
+                    $("#title2").html(data.result[0].content[1].title)
+                    $("#p2").html("歌手：" + data.result[0].content[1].author)
+
+                    $("#title3").html(data.result[0].content[2].title)
+                    $("#p3").html("歌手：" + data.result[0].content[2].author)
+
+                    $("#title4").html(data.result[0].content[3].title)
+                    $("#p4").html("歌手：" + data.result[0].content[3].author)
+
+
+                    // -----------------------------------------------------
+
+                    $("#pic2").prop("src", data.result[1].pic_s210);
+
+                    $("#img5").prop("src", data.result[1].content[0].pic_big);
+                    $("#img6").prop("src", data.result[1].content[1].pic_big);
+                    $("#img7").prop("src", data.result[1].content[2].pic_big);
+                    $("#img8").prop("src", data.result[1].content[3].pic_big);
+
+                    $("#title5").html(data.result[1].content[0].title)
+                    $("#p5").html("歌手：" + data.result[1].content[0].author)
+
+                    $("#title6").html(data.result[1].content[1].title)
+                    $("#p6").html("歌手：" + data.result[1].content[1].author)
+
+                    $("#title7").html(data.result[1].content[2].title)
+                    $("#p7").html("歌手：" + data.result[1].content[2].author)
+
+                    $("#title8").html(data.result[1].content[3].title)
+                    $("#p8").html("歌手：" + data.result[1].content[3].author)
+
+                    // -----------------------------------------------------
+                    $("#pic3").prop("src", data.result[2].pic_s210);
+
+                    $("#img9").prop("src", data.result[2].content[0].pic_big);
+                    $("#img10").prop("src", data.result[2].content[1].pic_big);
+                    $("#img11").prop("src", data.result[2].content[2].pic_big);
+                    $("#img12").prop("src", data.result[2].content[3].pic_big);
+
+                    $("#title9").html(data.result[2].content[0].title)
+                    $("#p9").html("歌手：" + data.result[2].content[0].author)
+
+                    $("#title10").html(data.result[2].content[1].title)
+                    $("#p10").html("歌手：" + data.result[2].content[1].author)
+
+                    $("#title11").html(data.result[2].content[2].title)
+                    $("#p11").html("歌手：" + data.result[2].content[2].author)
+
+                    $("#title12").html(data.result[2].content[3].title)
+                    $("#p12").html("歌手：" + data.result[2].content[3].author)
+
+                    // -----------------------------------------------------
+                    $("#pic4").prop("src", data.result[3].pic_s210);
+
+                    $("#img13").prop("src", data.result[3].content[0].pic_big);
+                    $("#img14").prop("src", data.result[3].content[1].pic_big);
+                    $("#img15").prop("src", data.result[3].content[2].pic_big);
+                    $("#img16").prop("src", data.result[3].content[3].pic_big);
+
+                    $("#title13").html(data.result[3].content[0].title)
+                    $("#p13").html("歌手：" + data.result[3].content[0].author)
+
+                    $("#title14").html(data.result[3].content[1].title)
+                    $("#p14").html("歌手：" + data.result[3].content[1].author)
+
+                    $("#title15").html(data.result[3].content[2].title)
+                    $("#p15").html("歌手：" + data.result[3].content[2].author)
+
+                    $("#title16").html(data.result[3].content[3].title)
+                    $("#p16").html("歌手：" + data.result[3].content[3].author)
+
+                    // -----------------------------------------------------
+
+                    $("#pic5").prop("src", data.result[4].pic_s210);
+
+                    $("#img17").prop("src", data.result[4].content[0].pic_big);
+                    $("#img18").prop("src", data.result[4].content[1].pic_big);
+                    $("#img19").prop("src", data.result[4].content[2].pic_big);
+                    $("#img20").prop("src", data.result[4].content[3].pic_big);
+
+                    $("#title17").html(data.result[4].content[0].title)
+                    $("#p17").html("歌手：" + data.result[4].content[0].author)
+
+                    $("#title18").html(data.result[4].content[1].title)
+                    $("#p18").html("歌手：" + data.result[4].content[1].author)
+
+                    $("#title19").html(data.result[4].content[2].title)
+                    $("#p19").html("歌手：" + data.result[4].content[2].author)
+
+                    $("#title20").html(data.result[4].content[3].title)
+                    $("#p20").html("歌手：" + data.result[4].content[3].author)
+
+                    // -----------------------------------------------------
+                    $("#pic6").prop("src", data.result[5].pic_s210);
+
+                    $("#img21").prop("src", data.result[5].content[0].pic_big);
+                    $("#img22").prop("src", data.result[5].content[1].pic_big);
+                    $("#img23").prop("src", data.result[5].content[2].pic_big);
+                    $("#img24").prop("src", data.result[5].content[3].pic_big);
+
+                    $("#title21").html(data.result[5].content[0].title)
+                    $("#p21").html("歌手：" + data.result[5].content[0].author)
+
+                    $("#title22").html(data.result[5].content[1].title)
+                    $("#p22").html("歌手：" + data.result[5].content[1].author)
+
+                    $("#title23").html(data.result[5].content[2].title)
+                    $("#p23").html("歌手：" + data.result[5].content[2].author)
+
+                    $("#title24").html(data.result[5].content[3].title)
+                    $("#p24").html("歌手：" + data.result[5].content[3].author)
+                },
+                "json"
+            );
+        });
+    </script>
+
+</head>
+
+<body>
+    <h2 style="text-align: center"></h2>
+    <div class="box">
+        <div>
+            <img src="#" alt="" id="pic1">
+        </div>
+        <ul>
+            <li>
+                <img src="#" alt="img1" id="img1" />
+                <h4 id="title1"></h4>
+                <p id="p1"></p>
+            </li>
+            <li>
+                <img src="#" alt="img2" id="img2" />
+                <h4 id="title2"></h4>
+                <p id="p2"></p>
+            </li>
+            <li>
+                <img src="#" alt="img3" id="img3" />
+                <h4 id="title3"></h4>
+                <p id="p3"></p>
+            </li>
+            <li>
+                <img src="#" alt="img4" id="img4" />
+                <h4 id="title4"></h4>
+                <p id="p4"></p>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <div>
+            <img src="#" alt="" id="pic2">
+        </div>
+        <ul>
+            <li>
+                <img src="#" alt="img1" id="img5" />
+                <h4 id="title5"></h4>
+                <p id="p5"></p>
+            </li>
+            <li>
+                <img src="#" alt="img2" id="img6" />
+                <h4 id="title6"></h4>
+                <p id="p6"></p>
+            </li>
+            <li>
+                <img src="#" alt="img3" id="img7" />
+                <h4 id="title7"></h4>
+                <p id="p7"></p>
+
+            </li>
+            <li>
+                <img src="#" alt="img4" id="img8" />
+                <h4 id="title8"></h4>
+                <p id="p8"></p>
+
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <div>
+            <img src="#" alt="" id="pic3">
+        </div>
+        <ul>
+            <li>
+                <img src="#" alt="img1" id="img9" />
+                <h4 id="title9"></h4>
+                <p id="p9"></p>
+            </li>
+            <li>
+                <img src="#" alt="img2" id="img10" />
+                <h4 id="title10"></h4>
+                <p id="p10"></p>
+            </li>
+            <li>
+                <img src="#" alt="img3" id="img11" />
+                <h4 id="title11"></h4>
+                <p id="p11"></p>
+            </li>
+            <li>
+                <img src="#" alt="img4" id="img12" />
+                <h4 id="title12"></h4>
+                <p id="p12"></p>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <div>
+            <img src="#" alt="" id="pic4">
+        </div>
+        <ul>
+            <li>
+                <img src="#" alt="img1" id="img13" />
+                <h4 id="title13"></h4>
+                <p id="p13"></p>
+            </li>
+            <li>
+                <img src="#" alt="img2" id="img14" />
+                <h4 id="title14"></h4>
+                <p id="p14"></p>
+            </li>
+            <li>
+                <img src="#" alt="img3" id="img15" />
+                <h4 id="title15"></h4>
+                <p id="p15"></p>
+            </li>
+            <li>
+                <img src="#" alt="img4" id="img16" />
+                <h4 id="title16"></h4>
+                <p id="p16"></p>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <div>
+            <img src="#" alt="" id="pic5">
+        </div>
+        <ul>
+            <li>
+                <img src="#" alt="img1" id="img17" />
+                <h4 id="title17"></h4>
+                <p id="p17"></p>
+            </li>
+            <li>
+                <img src="#" alt="img2" id="img18" />
+                <h4 id="title18"></h4>
+                <p id="p18"></p>
+            </li>
+            <li>
+                <img src="#" alt="img3" id="img19" />
+                <h4 id="title19"></h4>
+                <p id="p19"></p>
+            </li>
+            <li>
+                <img src="#" alt="img4" id="img20" />
+                <h4 id="title20"></h4>
+                <p id="p20"></p>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <div>
+            <img src="#" alt="" id="pic6">
+        </div>
+        <ul>
+            <li>
+                <img src="#" alt="img1" id="img21" />
+                <h4 id="title21"></h4>
+                <p id="p21"></p>
+            </li>
+            <li>
+                <img src="#" alt="img2" id="img22" />
+                <h4 id="title22"></h4>
+                <p id="p22"></p>
+            </li>
+            <li>
+                <img src="#" alt="img3" id="img23" />
+                <h4 id="title23"></h4>
+                <p id="p23"></p>
+            </li>
+            <li>
+                <img src="#" alt="img4" id="img24" />
+                <h4 id="title24"></h4>
+                <p id="p24"></p>
+            </li>
+        </ul>
+    </div>
 </body>
+
 </html>
