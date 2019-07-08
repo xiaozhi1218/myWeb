@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap HelloWorld</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .row {
+            margin-top: 10px;
+        }
+
+        .container {
+            height: 800px;
+            text-align: center;
+        }
+
+        .col-lg-4 {
+            border: 1px solid #333;
+        }
+
+        .col-lg-2 {
+            border: 1px solid #333;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1>天气预报</h1>
+        </div>
+        <div class="row" id="row1">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="exampleInputEmail2">城市：</label>
+                    <input type="text" class="form-control" id="exampleInputEmail2" placeholder="请输入城市名称">
+                </div>
+                <button type="button" class="btn btn-default">查询</button>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-2 col1">
+            </div>
+            <div class="col-lg-2 col2">
+            </div>
+            <div class="col-lg-2 col3">
+            </div>
+            <div class="col-lg-2 col4">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "get",
+                url: "https://www.apiopen.top/weatherApi?city=昆明",
+                // data: $("#exampleInputEmail2").val(),
+                dataType: "json",
+                success: function (response) {
+                    // var str = "<h4>" + 
+                    // alert(response.data.forecast[0].date);
+                    $.each(response.data.forecast[0], function (indexInArray, valueOfElement) {
+                        var str = "<h4>" + valueOfElement + "</h4>"
+                        $(".col-lg-4").append(str);
+                    });
+                    $.each(response.data.forecast[1], function (indexInArray, valueOfElement) {
+                        var str = "<h4>" + valueOfElement + "</h4>"
+                        $(".col1").append(str);
+                    });
+                    $.each(response.data.forecast[2], function (indexInArray, valueOfElement) {
+                        var str = "<h4>" + valueOfElement + "</h4>"
+                        $(".col2").append(str);
+                    });
+                    $.each(response.data.forecast[3], function (indexInArray, valueOfElement) {
+                        var str = "<h4>" + valueOfElement + "</h4>"
+                        $(".col3").append(str);
+                    });
+                    $.each(response.data.forecast[4], function (indexInArray, valueOfElement) {
+                        var str = "<h4>" + valueOfElement + "</h4>"
+                        $(".col4").append(str);
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
