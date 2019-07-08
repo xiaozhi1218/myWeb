@@ -17,7 +17,11 @@
                 function (data) {
                     $("h2").html(data.result[0].comment);
 
-                    $("#pic1").prop("src", data.result[0].pic_s210);
+                    for (let index = 0; index < data.result.length; index++) {
+                        $("#pic" + (index + 1)).prop("src", data.result[index].pic_s210);
+                    }
+
+                    // $("#pic1").prop("src", data.result[0].pic_s210);
 
                     $("#img1").prop("src", data.result[0].content[0].pic_big);
                     $("#img2").prop("src", data.result[0].content[1].pic_big);
@@ -39,7 +43,7 @@
 
                     // -----------------------------------------------------
 
-                    $("#pic2").prop("src", data.result[1].pic_s210);
+                    // $("#pic2").prop("src", data.result[1].pic_s210);
 
                     $("#img5").prop("src", data.result[1].content[0].pic_big);
                     $("#img6").prop("src", data.result[1].content[1].pic_big);
@@ -59,7 +63,7 @@
                     $("#p8").html("歌手：" + data.result[1].content[3].author)
 
                     // -----------------------------------------------------
-                    $("#pic3").prop("src", data.result[2].pic_s210);
+                    // $("#pic3").prop("src", data.result[2].pic_s210);
 
                     $("#img9").prop("src", data.result[2].content[0].pic_big);
                     $("#img10").prop("src", data.result[2].content[1].pic_big);
@@ -79,7 +83,7 @@
                     $("#p12").html("歌手：" + data.result[2].content[3].author)
 
                     // -----------------------------------------------------
-                    $("#pic4").prop("src", data.result[3].pic_s210);
+                    // $("#pic4").prop("src", data.result[3].pic_s210);
 
                     $("#img13").prop("src", data.result[3].content[0].pic_big);
                     $("#img14").prop("src", data.result[3].content[1].pic_big);
@@ -100,7 +104,7 @@
 
                     // -----------------------------------------------------
 
-                    $("#pic5").prop("src", data.result[4].pic_s210);
+                    // $("#pic5").prop("src", data.result[4].pic_s210);
 
                     $("#img17").prop("src", data.result[4].content[0].pic_big);
                     $("#img18").prop("src", data.result[4].content[1].pic_big);
@@ -120,7 +124,7 @@
                     $("#p20").html("歌手：" + data.result[4].content[3].author)
 
                     // -----------------------------------------------------
-                    $("#pic6").prop("src", data.result[5].pic_s210);
+                    // $("#pic6").prop("src", data.result[5].pic_s210);
 
                     $("#img21").prop("src", data.result[5].content[0].pic_big);
                     $("#img22").prop("src", data.result[5].content[1].pic_big);

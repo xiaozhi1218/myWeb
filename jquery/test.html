@@ -22,33 +22,221 @@
 
             // $city.each((index, element) => {
             //     alert(this);
-                // alert(index + ":" + element.innerHTML);
-                // alert(index + ":" + $(element).html());
+            // alert(index + ":" + element.innerHTML);
+            // alert(index + ":" + $(element).html());
             // })
 
             // $(city).each(function (index, element) {
             //     // element == this
-                
+
             // });
 
-            $.each($city, function (indexInArray, valueOfElement) { 
-                alert(indexInArray + ":" + $(valueOfElement).html()); 
-            });
+            // $.each($city, function (indexInArray, valueOfElement) {
+            //     alert(indexInArray + ":" + $(valueOfElement).html());
+            // });
 
             // for (const li of $city) {
             //     alert($(li).html())
             // }
         });
     </script>
+
+    <script>
+
+        $(document).ready(function () {
+            $.get("https://api.apiopen.top/musicRankings",
+                function (data) {
+                    $("h2").html(data.result[0].comment);
+
+                    for (let index = 0; index < data.result.length; index++) {
+                        $("#pic" + (index + 1)).prop("src", data.result[index].pic_s210);
+                    }
+
+                    for(let i = 1; i <= 24; i++){
+
+                        for(let j = 0; j < 5; j++){
+
+                            for(let k = 0; k < 4; k++){
+                                $("#img" + i).prop("src", data.result[j].content[k].pic_big)
+                            }
+                        }
+                    }
+               
+                    
+                },
+                "json"
+            );
+        });
+
+    </script>
 </head>
 
 <body>
-    <ul id="city">
-        <li>北京</li>
-        <li>上海</li>
-        <li>天津</li>
-        <li>重庆</li>
-    </ul>
+    <h2 style="text-align: center"></h2>
+    <div class="box">
+        <div>
+            <img src="#" alt="" id="pic1">
+        </div>
+        <ul>
+            <li>
+                <img src="#" alt="img1" id="img1" />
+                <h4 id="title1"></h4>
+                <p id="p1"></p>
+            </li>
+            <li>
+                <img src="#" alt="img2" id="img2" />
+                <h4 id="title2"></h4>
+                <p id="p2"></p>
+            </li>
+            <li>
+                <img src="#" alt="img3" id="img3" />
+                <h4 id="title3"></h4>
+                <p id="p3"></p>
+            </li>
+            <li>
+                <img src="#" alt="img4" id="img4" />
+                <h4 id="title4"></h4>
+                <p id="p4"></p>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <div>
+            <img src="#" alt="" id="pic2">
+        </div>
+        <ul>
+            <li>
+                <img src="#" alt="img1" id="img5" />
+                <h4 id="title5"></h4>
+                <p id="p5"></p>
+            </li>
+            <li>
+                <img src="#" alt="img2" id="img6" />
+                <h4 id="title6"></h4>
+                <p id="p6"></p>
+            </li>
+            <li>
+                <img src="#" alt="img3" id="img7" />
+                <h4 id="title7"></h4>
+                <p id="p7"></p>
+
+            </li>
+            <li>
+                <img src="#" alt="img4" id="img8" />
+                <h4 id="title8"></h4>
+                <p id="p8"></p>
+
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <div>
+            <img src="#" alt="" id="pic3">
+        </div>
+        <ul>
+            <li>
+                <img src="#" alt="img1" id="img9" />
+                <h4 id="title9"></h4>
+                <p id="p9"></p>
+            </li>
+            <li>
+                <img src="#" alt="img2" id="img10" />
+                <h4 id="title10"></h4>
+                <p id="p10"></p>
+            </li>
+            <li>
+                <img src="#" alt="img3" id="img11" />
+                <h4 id="title11"></h4>
+                <p id="p11"></p>
+            </li>
+            <li>
+                <img src="#" alt="img4" id="img12" />
+                <h4 id="title12"></h4>
+                <p id="p12"></p>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <div>
+            <img src="#" alt="" id="pic4">
+        </div>
+        <ul>
+            <li>
+                <img src="#" alt="img1" id="img13" />
+                <h4 id="title13"></h4>
+                <p id="p13"></p>
+            </li>
+            <li>
+                <img src="#" alt="img2" id="img14" />
+                <h4 id="title14"></h4>
+                <p id="p14"></p>
+            </li>
+            <li>
+                <img src="#" alt="img3" id="img15" />
+                <h4 id="title15"></h4>
+                <p id="p15"></p>
+            </li>
+            <li>
+                <img src="#" alt="img4" id="img16" />
+                <h4 id="title16"></h4>
+                <p id="p16"></p>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <div>
+            <img src="#" alt="" id="pic5">
+        </div>
+        <ul>
+            <li>
+                <img src="#" alt="img1" id="img17" />
+                <h4 id="title17"></h4>
+                <p id="p17"></p>
+            </li>
+            <li>
+                <img src="#" alt="img2" id="img18" />
+                <h4 id="title18"></h4>
+                <p id="p18"></p>
+            </li>
+            <li>
+                <img src="#" alt="img3" id="img19" />
+                <h4 id="title19"></h4>
+                <p id="p19"></p>
+            </li>
+            <li>
+                <img src="#" alt="img4" id="img20" />
+                <h4 id="title20"></h4>
+                <p id="p20"></p>
+            </li>
+        </ul>
+    </div>
+    <div class="box">
+        <div>
+            <img src="#" alt="" id="pic6">
+        </div>
+        <ul>
+            <li>
+                <img src="#" alt="img1" id="img21" />
+                <h4 id="title21"></h4>
+                <p id="p21"></p>
+            </li>
+            <li>
+                <img src="#" alt="img2" id="img22" />
+                <h4 id="title22"></h4>
+                <p id="p22"></p>
+            </li>
+            <li>
+                <img src="#" alt="img3" id="img23" />
+                <h4 id="title23"></h4>
+                <p id="p23"></p>
+            </li>
+            <li>
+                <img src="#" alt="img4" id="img24" />
+                <h4 id="title24"></h4>
+                <p id="p24"></p>
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>
