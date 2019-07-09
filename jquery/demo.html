@@ -72,10 +72,14 @@
 
     <script>
         $(document).ready(function () {
+
+            // var str = $("#exampleInputEmail2").text();
+
             $.ajax({
-                type: "get",
-                url: "https://www.apiopen.top/weatherApi?city=昆明",
+                type: "post",
+                url: "https://www.apiopen.top/weatherApi?city=" + "昆明",
                 // data: $("#exampleInputEmail2").val(),
+                // data: "city=" + $("#exampleInputEmail2").text(),
                 dataType: "json",
                 success: function (response) {
                     // var str = "<h4>" + 
