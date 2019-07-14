@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=[device-width], initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+    
+</head>
+<body>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                type: "POST",
+                url: "url",
+                data: "name=123&age=13",
+                dataType: "json",
+                success: function (response) {
+                    alert(response);
+                }
+            });
+
+            $.post("url", data,
+                function (data, textStatus, jqXHR) {
+                    
+                },
+                "dataType"
+            );
+        });
+
+    </script>
+    
+
+   
+    <script src="../js/jquery-3.4.1.js"></script>
+</body>
+</html>
